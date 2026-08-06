@@ -35,7 +35,7 @@
     <main class="legal-page">
       <div class="container">
         <h1>Privacy Policy</h1>
-        <p class="legal-meta">Effective date: July 7, 2026</p>
+        <p class="legal-meta">Effective date: August 6, 2026</p>
 
         <p>
           Tether ("we", "us", or "our") is a mobile accountability app for two people who choose to
@@ -53,13 +53,14 @@
         <h2>What we collect</h2>
         <p>When you create an account and use Tether, we process:</p>
         <ul>
-          <li><strong>Account information:</strong> email address and name from Google sign-in.</li>
+          <li><strong>Account information:</strong> email address and name (or relay email) from Sign in with Apple and/or Google Sign-In.</li>
           <li><strong>Profile information:</strong> display name, partner color, timezone, and onboarding state.</li>
           <li><strong>Tasks:</strong> titles, descriptions, due dates, recurrence settings, completion status, and whether each task is private or shared.</li>
           <li><strong>Tugs and share prompts:</strong> short messages you send to your partner about shared tasks or empty states.</li>
+          <li><strong>Partner rituals (when paired):</strong> Daily knot answers, Squeeze notes, and Soft celebrate moments you choose to create or view.</li>
           <li><strong>Screen time check-ins:</strong> your self-reported daily rating (Light, Normal, or A lot). We do not collect OS screen-time data, app usage minutes, or device monitoring.</li>
           <li><strong>App opens:</strong> dates you open the app while paired, used only for cord streaks.</li>
-          <li><strong>Notification preferences:</strong> toggles and quiet-hour settings you configure.</li>
+          <li><strong>Push tokens and notification preferences:</strong> device push tokens (if you allow notifications) plus toggles and quiet-hour settings you configure.</li>
           <li><strong>Pairing codes:</strong> temporary 6-character codes used to connect with one partner.</li>
         </ul>
 
@@ -92,14 +93,15 @@
 
         <h2>Third-party services</h2>
         <ul>
-          <li><strong>Supabase</strong> hosts authentication, database, and realtime sync.</li>
-          <li><strong>Google Sign In</strong> authenticates your account.</li>
-          <li><strong>Apple Push Notification service (APNs)</strong> may deliver notifications if you enable them.</li>
+          <li><strong>InstantDB (Instant)</strong> hosts authentication, realtime sync, and app data storage.</li>
+          <li><strong>Sign in with Apple</strong> and <strong>Google Sign-In</strong> authenticate your account.</li>
+          <li><strong>Apple Push Notification service (APNs)</strong> may deliver notifications if you enable them (via Expo push).</li>
+          <li><strong>Cloudflare Workers</strong> may help deliver partner notifications you opt into.</li>
           <li><strong>Expo Application Services (EAS)</strong> builds and distributes the app.</li>
         </ul>
         <p>
           These providers process data on our behalf under their own terms and privacy policies. We only share
-          what is needed to operate the service.
+          what is needed to operate the service. We do not sell your personal information.
         </p>
 
         <h2>Data retention</h2>
@@ -113,10 +115,10 @@
         <p>You can:</p>
         <ul>
           <li>Update your profile in the app at any time</li>
-          <li>Unpair from your partner in Settings</li>
-          <li>Turn notification categories on or off in Settings</li>
+          <li>Unpair from your partner in Me (settings)</li>
+          <li>Turn notification categories on or off in Me</li>
           <li>Sign out on any device</li>
-          <li><strong>Delete your account</strong> in Settings. Deletion is permanent, removes your data from our servers, and ends any active pairing.</li>
+          <li><strong>Delete your account</strong> in Me. Deletion is permanent, removes your data from our servers, and ends any active pairing.</li>
         </ul>
         <p>
           Depending on where you live, you may have additional rights to access, correct, export, or delete personal
@@ -131,9 +133,9 @@
 
         <h2>Security</h2>
         <p>
-          We use industry-standard safeguards including encrypted transport (HTTPS/TLS), authenticated database access,
-          and row-level security so partners only see data you choose to share. No method of transmission or storage is
-          100% secure, but we work to protect your information.
+          We use industry-standard safeguards including encrypted transport (HTTPS/TLS), authenticated access to our
+          backend, and permission rules so partners only see data you choose to share. No method of transmission or
+          storage is 100% secure, but we work to protect your information.
         </p>
 
         <h2>International transfers</h2>
