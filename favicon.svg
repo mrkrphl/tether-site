@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-label="twodo">
+  <rect width="1024" height="1024" rx="229" ry="229" fill="#0C6E67"/>
+  <g fill="none" stroke="#FFFFFF" stroke-width="108" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M266 512 L430 696 L737 328"/>
+    <path d="M353 456 L517 640 L824 272"/>
+  </g>
+</svg>
