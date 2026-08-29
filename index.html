@@ -3,12 +3,12 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Tether - A to-do list your partner can actually see</title>
+    <title>twodo — a to-do for two</title>
     <meta
       name="description"
-      content="Tether is a calm accountability app for two people. Share tasks on purpose, send gentle tugs, and check in without surveillance."
+      content="Twodo is a to-do list for two people. Pair once. Your day stays private. Share a task only when you both need it."
     />
-    <meta name="theme-color" content="#FFFBF3" />
+    <meta name="theme-color" content="#F2F2F2" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -16,83 +16,261 @@
       <div class="container">
         <a class="brand" href="index.html">
           <span class="brand-mark" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M6 12C6 8.5 8.5 6 12 6C15.5 6 18 8.5 18 12"
-                stroke="#FFFBF3"
-                stroke-width="2.5"
-                stroke-linecap="round"
-              />
-              <circle cx="12" cy="14" r="2.5" fill="#FFFBF3" />
-            </svg>
+            <span class="dot-a"></span>
+            <span class="dot-s"></span>
           </span>
-          Tether
+          twodo
         </a>
         <nav class="site-nav" aria-label="Primary">
           <a href="privacy.html">Privacy</a>
           <a href="terms.html">Terms</a>
           <a href="support.html">Support</a>
-          <a class="btn" href="https://apps.apple.com/app/id6788044559">App Store</a>
         </nav>
       </div>
     </header>
 
     <main>
       <section class="hero">
-        <div class="container hero-grid">
-          <div>
-            <p class="eyebrow">For two people, not two hundred</p>
-            <h1>A to-do list your partner can actually see.</h1>
-            <p class="lead">
-              Tether helps couples and roommates stay accountable with voluntary sharing,
-              gentle tugs on shared tasks, and simple daily check-ins. Private by default.
-            </p>
-            <div class="hero-actions">
-              <a class="btn" href="https://apps.apple.com/app/id6788044559">Download on the App Store</a>
-              <a class="btn btn-ghost" href="support.html">Get support</a>
+        <div class="container">
+          <h1>A to-do for two.</h1>
+          <p class="promo">Pair once. Your day stays private. Share a task only when you both need it.</p>
+
+          <div class="phones" aria-hidden="true">
+            <div class="phone">
+              <div class="phone-screen">
+                <div class="island"></div>
+                <div class="phone-body">
+                  <div class="phone-title-row">
+                    <p class="phone-title">Today</p>
+                    <span class="plus">
+                      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" />
+                      </svg>
+                    </span>
+                  </div>
+                  <div class="task">
+                    <span class="radio"></span>
+                    <span class="task-label">Water the plants</span>
+                    <span class="avatars">
+                      <span class="who alex">A</span>
+                      <span class="who sam">S</span>
+                    </span>
+                  </div>
+                  <div class="task">
+                    <span class="radio"></span>
+                    <span class="task-label">Book dentist appointment</span>
+                    <span class="task-meta">
+                      <svg class="lock" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <rect x="6" y="11" width="12" height="9" rx="2" stroke="currentColor" stroke-width="1.8" />
+                        <path d="M8 11V8a4 4 0 0 1 8 0v3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+                      </svg>
+                    </span>
+                  </div>
+                  <div class="task">
+                    <span class="radio"></span>
+                    <span class="task-label">Pick up dry cleaning</span>
+                    <span class="avatars">
+                      <span class="who alex">A</span>
+                      <span class="who sam">S</span>
+                    </span>
+                  </div>
+                  <div class="task">
+                    <span class="radio"></span>
+                    <span class="task-label">Renew car insurance</span>
+                    <span class="task-meta">
+                      <svg class="lock" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <rect x="6" y="11" width="12" height="9" rx="2" stroke="currentColor" stroke-width="1.8" />
+                        <path d="M8 11V8a4 4 0 0 1 8 0v3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+                      </svg>
+                    </span>
+                  </div>
+                  <div class="task">
+                    <span class="radio"></span>
+                    <span class="task-label">Buy coffee beans</span>
+                    <span class="task-meta">
+                      <svg class="lock" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <rect x="6" y="11" width="12" height="9" rx="2" stroke="currentColor" stroke-width="1.8" />
+                        <path d="M8 11V8a4 4 0 0 1 8 0v3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+                <nav class="tabbar">
+                  <span class="tab active">
+                    <svg viewBox="0 0 24 24" fill="none"><path d="M5 7h14M5 12h14M5 17h10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" /></svg>
+                    Today
+                  </span>
+                  <span class="tab">
+                    <svg viewBox="0 0 24 24" fill="none"><circle cx="9" cy="8" r="2.2" stroke="currentColor" stroke-width="1.6" /><circle cx="15" cy="8" r="2.2" stroke="currentColor" stroke-width="1.6" /><path d="M4.8 18c.4-2.4 2.2-3.6 4.2-3.6s3.8 1.2 4.2 3.6M11.8 18c.4-2.4 2.2-3.6 4.2-3.6s3.8 1.2 4.2 3.6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" /></svg>
+                    Partner
+                  </span>
+                  <span class="tab">
+                    <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="2.4" stroke="currentColor" stroke-width="1.6" /><path d="M6.5 18c.5-2.8 2.6-4.2 5.5-4.2s5 1.4 5.5 4.2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" /></svg>
+                    Me
+                  </span>
+                </nav>
+              </div>
+            </div>
+
+            <div class="phone">
+              <div class="phone-screen">
+                <div class="island"></div>
+                <div class="phone-body">
+                  <div class="phone-title-row">
+                    <p class="phone-title">Me</p>
+                  </div>
+                  <div class="me-profile">
+                    <span class="who lg alex">A</span>
+                    <span class="me-name">alex</span>
+                    <span class="me-sub">Paired with sam</span>
+                  </div>
+                  <div class="me-block">
+                    <div class="me-label">Notifications</div>
+                    <div class="me-row">Shared activity <span class="toggle" aria-hidden="true"></span></div>
+                    <div class="me-row">Quiet hours <span>10pm – 8am</span></div>
+                  </div>
+                  <div class="me-block">
+                    <div class="me-label">Privacy</div>
+                    <p class="privacy-note">They see Shared tasks you choose. Private stays yours.</p>
+                  </div>
+                  <div class="me-block">
+                    <div class="me-label">Partner</div>
+                    <div class="partner-row">
+                      <span class="who sam">S</span>
+                      sam
+                      <span class="chev">›</span>
+                    </div>
+                  </div>
+                </div>
+                <nav class="tabbar">
+                  <span class="tab">
+                    <svg viewBox="0 0 24 24" fill="none"><path d="M5 7h14M5 12h14M5 17h10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" /></svg>
+                    Today
+                  </span>
+                  <span class="tab">
+                    <svg viewBox="0 0 24 24" fill="none"><circle cx="9" cy="8" r="2.2" stroke="currentColor" stroke-width="1.6" /><circle cx="15" cy="8" r="2.2" stroke="currentColor" stroke-width="1.6" /><path d="M4.8 18c.4-2.4 2.2-3.6 4.2-3.6s3.8 1.2 4.2 3.6M11.8 18c.4-2.4 2.2-3.6 4.2-3.6s3.8 1.2 4.2 3.6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" /></svg>
+                    Partner
+                  </span>
+                  <span class="tab active">
+                    <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="2.4" stroke="currentColor" stroke-width="1.6" /><path d="M6.5 18c.5-2.8 2.6-4.2 5.5-4.2s5 1.4 5.5 4.2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" /></svg>
+                    Me
+                  </span>
+                </nav>
+              </div>
             </div>
           </div>
 
-          <div class="phone-frame" aria-hidden="true">
-            <div class="phone-screen">
-              <div class="cord"></div>
-              <div class="task-chip">Grocery run</div>
-              <div class="task-chip shared">Pay rent together</div>
-              <div class="task-chip">Call dentist</div>
-              <div class="task-chip shared">Meal prep Sunday</div>
-            </div>
+          <p class="lead">
+            Twodo is a to-do list for two people. Your day is private by default. Share a task only when
+            you both need it. Ask, don't assign. They add it only if they want to. Quiet hours on by default.
+          </p>
+          <div class="hero-actions">
+            <a href="support.html">Get support</a>
+            <a href="privacy.html">How privacy works</a>
           </div>
         </div>
       </section>
 
       <section class="section">
         <div class="container">
-          <h2>Built on trust, not tracking</h2>
-          <p class="section-intro">
-            Tether is accountability you choose. Nothing is shared unless you mark a task shared.
-            Screen time is a self-reported check-in, not device monitoring.
-          </p>
-          <div class="feature-grid">
-            <article class="feature-card">
-              <h3>Private by default</h3>
-              <p>Your full task list stays yours. Share only what you want your partner to see.</p>
+          <h2>Your day, private by default.</h2>
+          <p class="section-intro">Share a task only when you both need it.</p>
+          <div class="feature-list">
+            <article class="feature">
+              <h3>Private tasks stay yours.</h3>
+              <p>A lock means they never see it. Your dentist, your insurance, your list.</p>
             </article>
-            <article class="feature-card">
-              <h3>Gentle tugs</h3>
-              <p>Send a friendly nudge on a shared task. No spam, no guilt trips, just a pull on the cord.</p>
+            <article class="feature">
+              <h3>Shared tasks you both chose.</h3>
+              <p>Both initials appear only after you decide it belongs to the two of you.</p>
             </article>
-            <article class="feature-card">
-              <h3>One partner, one cord</h3>
-              <p>Pair with a 6-character code. Unpair anytime. Shared tasks revert to private instantly.</p>
+            <article class="feature">
+              <h3>Ask your person instead of dumping a chore.</h3>
+              <p>They add it only if they want to. No assignment, no pile-on.</p>
+            </article>
+            <article class="feature">
+              <h3>What they shared with you, in one quiet place.</h3>
+              <p>Their list lives on Partner. Open, done, and nothing else in the way.</p>
+            </article>
+            <article class="feature">
+              <h3>Quiet hours so nights stay quiet.</h3>
+              <p>On by default. Shared activity can wait until morning.</p>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="strip">
+      <section class="section">
+        <div class="container ask-grid">
+          <div>
+            <h2>Ask, don’t assign.</h2>
+            <p class="section-intro tight">
+              They add it only if they want to. A request sits at the top of Today until they dismiss it or take it on.
+            </p>
+          </div>
+          <div class="phone" aria-hidden="true">
+            <div class="phone-screen">
+              <div class="island"></div>
+              <div class="phone-body">
+                <div class="phone-title-row">
+                  <p class="phone-title">Today</p>
+                  <span class="plus">
+                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" />
+                    </svg>
+                  </span>
+                </div>
+                <div class="request">
+                  <div class="request-top">
+                    <span class="who sam">S</span>
+                    <p>Sam asked you: Pick up milk on the way home Today.</p>
+                  </div>
+                  <div class="request-actions">
+                    <span class="dim">Dismiss</span>
+                    <span class="go">Add</span>
+                  </div>
+                </div>
+                <div class="task">
+                  <span class="radio"></span>
+                  <span class="task-label">Water the plants</span>
+                  <span class="avatars">
+                    <span class="who alex">A</span>
+                    <span class="who sam">S</span>
+                  </span>
+                </div>
+                <div class="task">
+                  <span class="radio"></span>
+                  <span class="task-label">Book dentist appointment</span>
+                  <span class="task-meta">
+                    <svg class="lock" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <rect x="6" y="11" width="12" height="9" rx="2" stroke="currentColor" stroke-width="1.8" />
+                      <path d="M8 11V8a4 4 0 0 1 8 0v3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+                    </svg>
+                  </span>
+                </div>
+              </div>
+              <nav class="tabbar">
+                <span class="tab active">
+                  <svg viewBox="0 0 24 24" fill="none"><path d="M5 7h14M5 12h14M5 17h10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" /></svg>
+                  Today
+                </span>
+                <span class="tab">
+                  <svg viewBox="0 0 24 24" fill="none"><circle cx="9" cy="8" r="2.2" stroke="currentColor" stroke-width="1.6" /><circle cx="15" cy="8" r="2.2" stroke="currentColor" stroke-width="1.6" /><path d="M4.8 18c.4-2.4 2.2-3.6 4.2-3.6s3.8 1.2 4.2 3.6M11.8 18c.4-2.4 2.2-3.6 4.2-3.6s3.8 1.2 4.2 3.6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" /></svg>
+                  Partner
+                </span>
+                <span class="tab">
+                  <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="2.4" stroke="currentColor" stroke-width="1.6" /><path d="M6.5 18c.5-2.8 2.6-4.2 5.5-4.2s5 1.4 5.5 4.2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" /></svg>
+                  Me
+                </span>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="not-this">
         <div class="container">
-          <p>Voluntary sharing. No surveillance. Free for v1.</p>
-          <a class="btn btn-ghost" href="privacy.html">Read our privacy policy</a>
+          <p>Not a group chat. Not a family org chart.</p>
         </div>
       </section>
     </main>
@@ -101,17 +279,10 @@
       <div class="container footer-grid">
         <a class="brand" href="index.html">
           <span class="brand-mark" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M6 12C6 8.5 8.5 6 12 6C15.5 6 18 8.5 18 12"
-                stroke="#FFFBF3"
-                stroke-width="2.5"
-                stroke-linecap="round"
-              />
-              <circle cx="12" cy="14" r="2.5" fill="#FFFBF3" />
-            </svg>
+            <span class="dot-a"></span>
+            <span class="dot-s"></span>
           </span>
-          Tether
+          twodo
         </a>
         <div class="footer-links">
           <a href="privacy.html">Privacy</a>
@@ -120,7 +291,7 @@
         </div>
       </div>
       <div class="container">
-        <p class="footer-copy">&copy; 2026 Tether. All rights reserved.</p>
+        <p class="footer-copy">&copy; 2026 twodo. All rights reserved.</p>
       </div>
     </footer>
   </body>

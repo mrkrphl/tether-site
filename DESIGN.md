@@ -1,40 +1,45 @@
-# Design System: Tether
-**Project ID:** tether (GitHub Pages + iOS app)
+# Design System: twodo
 
-## 1. Visual Theme & Atmosphere
+Public site for Twodo, a to-do list for two people. The visual language follows the App Store marketing frames: clean light gray, teal accents, sentence-case headlines, and a lot of air. It is not a sticker sheet.
 
-Tether feels warm, calm, and intentionally small-scale. The product is for two people, not a social network, so the visual language favors soft cream backgrounds, sticker-like cards with crisp ink borders, and playful display type without feeling childish. Density is relaxed: generous padding, short copy blocks, and one clear action per screen region. The braided cord metaphor (two partner colors meeting at a violet knot) is the central brand image.
+## 1. Visual theme
 
-## 2. Color Palette & Roles
+Quiet and private. The product is for two people, so the site stays small: short copy, generous space, one idea per block. Private vs shared is shown with a gray lock or the blue A / orange S avatars — never with badges, cords, or decorative chrome.
+
+## 2. Color palette
 
 | Name | Hex | Role |
 |------|-----|------|
-| Warm Canvas | `#FFFBF3` | Primary page background |
-| Ink Plum | `#241F3D` | Headlines, borders, primary text |
-| Muted Lilac Gray | `#8A84A6` | Secondary text, eyebrows |
-| Coral Pop | `#FF6B4A` | Primary CTA, cord strand, energy |
-| Coral Pressed | `#DE4A28` | Link hover, pressed states |
-| Knot Violet | `#8C5CFF` | Shared-state accent, cord center |
-| Sky Strand | `#3E8EFF` | Secondary cord color in UI previews |
-| Lavender Wash | `#F1EEFC` | Section strips, soft panels |
-| Card White | `#FFFFFF` | Elevated surfaces |
-| Hairline Lilac | `#D8D3EE` | Dividers, subtle borders |
+| Canvas | `#F2F2F2` | Page background |
+| Card | `#FFFFFF` | App surfaces, support card |
+| Ink | `#111111` | Headlines and primary text |
+| Muted | `#6B6B6B` | Subheads and body |
+| Faint | `#9A9A9A` | Inactive tabs, captions |
+| Line | `#E6E6E6` | Hairline dividers |
+| Teal | `#1AA99C` | Active tab, plus, toggle, links |
+| Alex | `#3B7BFF` | First person avatar |
+| Sam | `#F07A2A` | Second person avatar |
+| Lock | `#B8B8B8` | Private-task icon |
+| Phone | `#1A1A1A` | Device bezel |
 
-## 3. Typography Rules
+No hard offset shadows. No ink borders. Elevation on the device mockup is a single soft shadow.
 
-- **Display:** Baloo 2 (700-800) for product name, hero headlines, and section titles. Tight line-height on large type.
-- **Body:** Inter (400-600) for paragraphs, buttons, and settings rows. Comfortable 1.5-1.6 line-height.
-- **Mono labels:** Space Mono for small uppercase section labels in app settings. Use sparingly on marketing pages (one eyebrow max in hero).
+## 3. Typography
 
-## 4. Component Stylings
+- **Display and UI:** Inter 400–700. Sentence-case headlines. Tight tracking on large type (`-0.03em` to `-0.04em`).
+- **Wordmark:** lowercase `twodo`.
+- No display novelty faces. No monospace eyebrows.
 
-* **Buttons:** Pill-shaped with 2px ink border and offset hard shadow (`3px 3px 0`). Primary fill is coral; ghost variant is white card.
-* **Cards/Containers:** 14-16px corner radius, 2px ink border, hard shadow. Shared tasks use violet border accent.
-* **Inputs/Forms:** Rounded rectangles on card white with visible ink border. No placeholder-only labels in product UI.
+## 4. Components
 
-## 5. Layout Principles
+- **Header:** Sticky, translucent canvas, blur. Wordmark left, text links right. No store button.
+- **Device mockups:** Dark iPhone frame, Dynamic Island, white screen, Today / Partner / Me tab bar.
+- **Tasks:** Hollow radio, hairline row, lock or overlapping A/S avatars.
+- **Legal pages:** Single narrow column. Support contact sits on a white rounded card without a border.
 
-Mobile-first on the app; marketing site uses a max width of 1080px with 1rem side gutters on small screens. Hero is split text + product preview on desktop, stacked on mobile. Legal pages use a single readable column. Section rhythm alternates open canvas with lavender strip for emphasis. Sticky header with light blur for navigation continuity.
+## 5. Layout
+
+Marketing hero is centered copy over one or two device frames, matching the store compositions. Feature copy is a two-column type list, not a card grid. Legal pages use a 42rem measure. Max width for marketing is 1080px with 1.25rem side gutters.
 
 ## GitHub Pages URLs
 
