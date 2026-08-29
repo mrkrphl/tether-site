@@ -7,9 +7,9 @@
   --muted: #6b6b6b;
   --faint: #9a9a9a;
   --line: #e6e6e6;
-  --teal: #1aa99c;
-  --teal-pressed: #158f84;
-  --teal-soft: #e7f7f5;
+  --teal: #0c6e67;
+  --teal-pressed: #0a5c56;
+  --teal-soft: #e4f3f1;
   --alex: #3b7bff;
   --sam: #f07a2a;
   --lock: #b8b8b8;
@@ -94,28 +94,11 @@ img {
 }
 
 .brand-mark {
-  width: 22px;
-  height: 14px;
-  position: relative;
+  width: 32px;
+  height: 32px;
+  display: block;
   flex-shrink: 0;
-}
-
-.brand-mark span {
-  position: absolute;
-  top: 0;
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-}
-
-.brand-mark .dot-a {
-  left: 0;
-  background: var(--alex);
-}
-
-.brand-mark .dot-s {
-  right: 0;
-  background: var(--sam);
+  border-radius: 7px;
 }
 
 .site-nav {
