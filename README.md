@@ -1,6 +1,6 @@
-# Tether site
+# twodo site
 
-Public marketing and legal pages for the [Tether](https://github.com/mrkrphl/tether) iOS app.
+Public marketing and legal pages for Twodo, a to-do list for two people.
 
 ## Live site
 
