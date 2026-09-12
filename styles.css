@@ -733,3 +733,8 @@ img {
 .join-steps li {
   margin-bottom: 0.5rem;
 }
+
+.package-note code {
+  font-size: 0.88em;
+  color: var(--ink);
+}

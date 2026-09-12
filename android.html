@@ -3,26 +3,26 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Android closed test — twodo</title>
+    <title>Android closed test — Twodo</title>
     <meta
       name="description"
-      content="Join the twodo Android closed test. Private tasks. Share on purpose. Pair with one person."
+      content="Join the Twodo Android closed test. Private tasks. Share on purpose. Pair with one person."
     />
     <meta name="theme-color" content="#F2F2F2" />
     <link rel="icon" href="favicon.png" type="image/png" />
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-    <meta property="og:title" content="Android closed test — twodo" />
+    <meta property="og:title" content="Android closed test — Twodo" />
     <meta
       property="og:description"
-      content="Join the twodo Android closed test. Private tasks. Share on purpose."
+      content="Join the Twodo Android closed test. Private tasks. Share on purpose."
     />
     <meta property="og:image" content="https://mrkrphl.github.io/tether-site/og.png" />
     <meta property="og:url" content="https://mrkrphl.github.io/tether-site/android.html" />
     <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="twodo" />
+    <meta property="og:site_name" content="Twodo" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Android closed test — twodo" />
+    <meta name="twitter:title" content="Android closed test — Twodo" />
     <meta name="twitter:image" content="https://mrkrphl.github.io/tether-site/og.png" />
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -42,11 +42,12 @@
 
     <main class="legal-page">
       <div class="container">
-        <p class="legal-meta">Android · Play closed testing</p>
-        <h1>Try twodo on Android.</h1>
+        <p class="legal-meta">Android · Closed testing</p>
+        <h1>Try Twodo on Android.</h1>
         <p>
-          A to-do for two. Private by default. Share a task when you both need it. We’re inviting a small closed test
-          on Google Play — use the <strong>same Google account</strong> you use on your phone.
+          A to-do for two. Private by default. Share a task when you both need it. This page is for invited testers —
+          Twodo is not publicly listed on Google Play yet. Use the <strong>same Google account</strong> you use on your
+          phone.
         </p>
 
         <div class="support-card join-card" id="join">
@@ -66,7 +67,7 @@
             </label>
             <label class="check">
               <input type="checkbox" name="consent" required />
-              <span>Email me a Play closed-testing invite for twodo</span>
+              <span>Email me a closed-testing invite for Twodo</span>
             </label>
             <!-- honeypot -->
             <label class="hp" aria-hidden="true">
@@ -80,11 +81,15 @@
 
         <h2>After you sign up</h2>
         <ol class="join-steps">
-          <li>Open the email and tap <strong>Join the Play test</strong> (same Google account).</li>
-          <li>Install <strong>twodo</strong> from the Play Store.</li>
+          <li>Open the email and tap <strong>Join the test</strong> (same Google account).</li>
+          <li>Install <strong>Twodo</strong> from the closed-testing listing.</li>
           <li>Continue with Google → pair with your person (iPhone is fine).</li>
           <li>Share one task on purpose.</li>
         </ol>
+
+        <p class="legal-meta package-note">
+          Android package: <code>app.mrkrphl.tether</code> — that’s the install ID, not the display name.
+        </p>
 
         <p class="legal-meta">
           Questions? <a href="mailto:mrkrphl0705@gmail.com">mrkrphl0705@gmail.com</a> ·
@@ -106,7 +111,7 @@
         </div>
       </div>
       <div class="container">
-        <p class="footer-copy">&copy; 2026 twodo. All rights reserved.</p>
+        <p class="footer-copy">&copy; 2026 Twodo. All rights reserved.</p>
       </div>
     </footer>
 
@@ -160,7 +165,7 @@
                 statusEl.innerHTML =
                   (data.message || 'Check your email.') +
                   (data.playOptInUrl
-                    ? ' <a href="' + data.playOptInUrl + '">Open Play opt-in</a>.'
+                    ? ' <a href="' + data.playOptInUrl + '">Open the closed-test opt-in</a>.'
                     : '');
                 form.reset();
                 form.querySelector('[name=android]').checked = true;
