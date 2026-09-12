@@ -43,8 +43,8 @@ Marketing hero is centered copy over one or two device frames, matching the stor
 
 ## GitHub Pages URLs
 
-- Marketing: `https://mrkrphl.github.io/tether-site/`
-- Android closed test: `https://mrkrphl.github.io/tether-site/android.html`
-- Privacy: `https://mrkrphl.github.io/tether-site/privacy.html`
-- Terms: `https://mrkrphl.github.io/tether-site/terms.html`
-- Support: `https://mrkrphl.github.io/tether-site/support.html`
+- Marketing: `https://mrkrphl.github.io/twodo-site/`
+- Android closed test: `https://mrkrphl.github.io/twodo-site/android.html`
+- Privacy: `https://mrkrphl.github.io/twodo-site/privacy.html`
+- Terms: `https://mrkrphl.github.io/twodo-site/terms.html`
+- Support: `https://mrkrphl.github.io/twodo-site/support.html`
