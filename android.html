@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Android closed test — twodo</title>
+    <meta
+      name="description"
+      content="Join the twodo Android closed test. Private tasks. Share on purpose. Pair with one person."
+    />
+    <meta name="theme-color" content="#F2F2F2" />
+    <link rel="icon" href="favicon.png" type="image/png" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <meta property="og:title" content="Android closed test — twodo" />
+    <meta
+      property="og:description"
+      content="Join the twodo Android closed test. Private tasks. Share on purpose."
+    />
+    <meta property="og:image" content="https://mrkrphl.github.io/tether-site/og.png" />
+    <meta property="og:url" content="https://mrkrphl.github.io/tether-site/android.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="twodo" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Android closed test — twodo" />
+    <meta name="twitter:image" content="https://mrkrphl.github.io/tether-site/og.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <a class="brand" href="index.html">
+          <img class="brand-mark" src="icon.png" width="32" height="32" alt="" />
+          twodo
+        </a>
+        <nav class="site-nav" aria-label="Primary">
+          <a href="index.html">Home</a>
+          <a href="support.html">Support</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="legal-page">
+      <div class="container">
+        <p class="legal-meta">Android · Play closed testing</p>
+        <h1>Try twodo on Android.</h1>
+        <p>
+          A to-do for two. Private by default. Share a task when you both need it. We’re inviting a small closed test
+          on Google Play — use the <strong>same Google account</strong> you use on your phone.
+        </p>
+
+        <div class="support-card join-card" id="join">
+          <h2>Request an invite</h2>
+          <form id="play-signup" novalidate>
+            <label class="field">
+              <span>Email (Google / Play account)</span>
+              <input type="email" name="email" autocomplete="email" required placeholder="you@gmail.com" />
+            </label>
+            <label class="field">
+              <span>Name <span class="optional">(optional)</span></span>
+              <input type="text" name="name" autocomplete="name" placeholder="Alex" maxlength="80" />
+            </label>
+            <label class="check">
+              <input type="checkbox" name="android" checked required />
+              <span>I have an Android phone with the Play Store</span>
+            </label>
+            <label class="check">
+              <input type="checkbox" name="consent" required />
+              <span>Email me a Play closed-testing invite for twodo</span>
+            </label>
+            <!-- honeypot -->
+            <label class="hp" aria-hidden="true">
+              <span>Website</span>
+              <input type="text" name="website" tabindex="-1" autocomplete="off" />
+            </label>
+            <button type="submit" class="join-submit" id="submit-btn">Send me the invite</button>
+            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+
+        <h2>After you sign up</h2>
+        <ol class="join-steps">
+          <li>Open the email and tap <strong>Join the Play test</strong> (same Google account).</li>
+          <li>Install <strong>twodo</strong> from the Play Store.</li>
+          <li>Continue with Google → pair with your person (iPhone is fine).</li>
+          <li>Share one task on purpose.</li>
+        </ol>
+
+        <p class="legal-meta">
+          Questions? <a href="mailto:mrkrphl0705@gmail.com">mrkrphl0705@gmail.com</a> ·
+          <a href="https://apps.apple.com/us/app/twodo-shared-to-do/id6788044559">iOS App Store</a>
+        </p>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <a class="brand" href="index.html">
+          <img class="brand-mark" src="icon.png" width="32" height="32" alt="" />
+          twodo
+        </a>
+        <div class="footer-links">
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+          <a href="support.html">Support</a>
+        </div>
+      </div>
+      <div class="container">
+        <p class="footer-copy">&copy; 2026 twodo. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      // Set after Worker deploy, e.g. https://twodo-play-testers.YOUR_SUBDOMAIN.workers.dev
+      window.TWODO_PLAY_API = window.TWODO_PLAY_API || 'https://twodo-play-testers.sked-paeng.workers.dev';
+
+      (function () {
+        var form = document.getElementById('play-signup');
+        var statusEl = document.getElementById('form-status');
+        var btn = document.getElementById('submit-btn');
+        if (!form) return;
+
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+          statusEl.textContent = '';
+          statusEl.className = 'form-status';
+
+          var fd = new FormData(form);
+          var payload = {
+            email: String(fd.get('email') || '').trim(),
+            name: String(fd.get('name') || '').trim(),
+            android: fd.get('android') === 'on',
+            consent: fd.get('consent') === 'on',
+            website: String(fd.get('website') || ''),
+          };
+
+          if (!payload.email) {
+            statusEl.textContent = 'Enter your Google / Play email.';
+            statusEl.className = 'form-status err';
+            return;
+          }
+
+          btn.disabled = true;
+          btn.textContent = 'Sending…';
+
+          fetch(window.TWODO_PLAY_API.replace(/\/$/, '') + '/signup', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload),
+          })
+            .then(function (res) {
+              return res.json().then(function (data) {
+                return { res: res, data: data };
+              });
+            })
+            .then(function (_ref) {
+              var data = _ref.data;
+              if (data && data.ok) {
+                statusEl.className = 'form-status ok';
+                statusEl.innerHTML =
+                  (data.message || 'Check your email.') +
+                  (data.playOptInUrl
+                    ? ' <a href="' + data.playOptInUrl + '">Open Play opt-in</a>.'
+                    : '');
+                form.reset();
+                form.querySelector('[name=android]').checked = true;
+              } else {
+                statusEl.className = 'form-status err';
+                statusEl.textContent = (data && data.error) || 'Something went wrong. Try again.';
+              }
+            })
+            .catch(function () {
+              statusEl.className = 'form-status err';
+              statusEl.textContent = 'Network error. Try again in a moment.';
+            })
+            .finally(function () {
+              btn.disabled = false;
+              btn.textContent = 'Send me the invite';
+            });
+        });
+      })();
+    </script>
+  </body>
+</html>
