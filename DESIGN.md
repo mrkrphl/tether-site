@@ -1,4 +1,4 @@
-# Design System: twodo
+# Design System: Twodo
 
 Public site for Twodo, a to-do list for two people. The visual language follows the App Store marketing frames: clean light gray, teal accents, sentence-case headlines, and a lot of air. It is not a sticker sheet.
 
@@ -44,6 +44,7 @@ Marketing hero is centered copy over one or two device frames, matching the stor
 ## GitHub Pages URLs
 
 - Marketing: `https://mrkrphl.github.io/tether-site/`
+- Android closed test: `https://mrkrphl.github.io/tether-site/android.html`
 - Privacy: `https://mrkrphl.github.io/tether-site/privacy.html`
 - Terms: `https://mrkrphl.github.io/tether-site/terms.html`
 - Support: `https://mrkrphl.github.io/tether-site/support.html`
